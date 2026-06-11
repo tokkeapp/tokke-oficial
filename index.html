@@ -14,17 +14,25 @@
   </script>
 
   <script>
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/android/i.test(userAgent)) {
-      window.location.href = "https://play.google.com/store/apps/details?id=com.sgcavicorp.gangaxpress&hl=es_419";
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      window.location.href = "https://apps.apple.com/pe/app/tokke/id6743503696";
-    } else {
-      window.location.href = "https://play.google.com/store/apps/details?id=com.sgcavicorp.gangaxpress&hl=es_419";
-    }
+    window.addEventListener('load', function() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      setTimeout(function() {
+        if (/android/i.test(userAgent)) {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.sgcavicorp.gangaxpress&hl=es_419";
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "https://apps.apple.com/pe/app/tokke/id6743503696";
+        } else {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.sgcavicorp.gangaxpress&hl=es_419";
+        }
+      }, 1500);
+    });
   </script>
 </head>
-<body>
-  <p>Redirigiendo a Tokke...</p>
+<body style="font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #FF6B00;">
+  <div style="text-align: center; color: white;">
+    <img src="https://tokkeapp.github.io/tokke-oficial/logo.png" alt="Tokke" style="width: 120px; margin-bottom: 20px;" onerror="this.style.display='none'">
+    <p style="font-size: 22px; font-weight: bold; margin: 0;">Redirigiendo a Tokke...</p>
+    <p style="font-size: 15px; margin-top: 8px; opacity: 0.85;">Te llevamos a la tienda en un momento 🛵</p>
+  </div>
 </body>
 </html>
